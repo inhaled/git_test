@@ -1,0 +1,40 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 92.5%;
+}
+header,footer,section{
+border: 1px solid black;
+}
+header, footer {
+	height: 10vh;
+	clear: both;
+}
+header{
+	border-bottom: 8px dashed black;
+}
+footer{
+	border-top: 8px dashed black;
+}
+section{
+	font-size: 3rem;
+	text-align: center;
+	border: 8px solid black;
+	border-radius: 10px;
+	height: 25vh;
+	width: 33.3333%;
+	float: left;
+}
+
+body{
+	background-color: whitesmoke;
+}
+
+@media screen and (max-width: 680px){
+	section{
+		background: radial-gradient(white,grey)
+	}
+}
+
+\
