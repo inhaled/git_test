@@ -1,0 +1,210 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  /*font-size: 1em;*/
+  font: 300 1em "Roboto", Arial, sans-serif;
+}
+
+body {
+  /*font-size: calc(0.875rem+3vw);*/
+  /*font: 300 1rem/1.9em "Roboto", Arial, sans-serif;*/
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-size: calc(.5rem + 1.6vw); /*I'm not sure this is working*/
+}
+h2 {
+  font-size: calc(.5rem + .8vw); /*I'm not sure this is working*/
+}
+h3 {
+  font-size: calc(1.5rem + .1vw); /*I'm not sure this is working*/
+  line-height: 1.5em;
+}
+h4 {
+  font-size: calc(0.5rem + .5vw); /*I'm not sure this is working*/
+  line-height: 1.5em;
+}
+h5 {
+  font-size: calc(0.5rem + .8vw); /*I'm not sure this is working*/
+  line-height: 1.5em;
+}
+p,
+span {
+  /*font: 300 calc(0.3rem + 1.2vw)/calc(0.5rem + 1.2vw) "Roboto", Arial, sans-serif;*/
+  font-size: calc(0.3rem + 0.8vw); /*I'm not sure this is working*/
+  line-height: 1.5em;
+}
+
+nav {
+  /*font-size: 1em;*/
+  font: 300 1.2em "Quicksand", Arial, sans-serif;
+  line-height: 1.7em;
+}
+
+li{
+  font-size: 1em;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+nav {
+  float: left;
+  height: 2000vh;
+  width: 230px;
+  background-color: #FFFFFF;
+}
+
+aside li{
+  border-top: 2px solid whitesmoke;
+}
+aside li:last-child{
+  border-bottom: 2px solid whitesmoke;
+}
+
+.navigation input{
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover{
+  color: lightgreen;
+}
+
+ul{
+  list-style-type: none;
+  
+}
+
+main{
+  padding: 1% 1% 0 1%;
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+}
+
+.content-waterfall{
+  padding: 0 1% 1% 1%;
+}
+
+article{
+  max-height: 300px;
+  padding: 0 1% 0 1%;
+  display: grid;
+  grid-template-columns: .7fr 1fr .6fr;
+  /*border: 1px solid black;*/
+  white-space: normal;
+  border-top: 2px solid whitesmoke;
+}
+
+article:last-child{
+  border-bottom: 2px solid whitesmoke;
+}
+.post-block-header,
+.post-block-preview,
+.post-block-footer{
+  max-height: 300px;
+  overflow: hidden;
+  padding: 5%;
+  /*border: 1px solid black;*/
+}
+.post-block-preview p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.post-block-footer img{
+  float: right;
+  max-height: 150px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.logo {
+  margin-left: 2em;
+  margin-right: 100%;
+  margin-bottom: 10%;
+  padding-top: 12%;
+  float: left;
+  width: 60px
+}
+
+nav a{
+  text-align: left;
+}
+
+.join{
+  color: #ebbd34;
+  font-weight: 600;
+}
+.login{
+  display: inline-block;
+  width: 100%;
+}
+
+.join,
+.login{
+  padding-left: 2em; 
+  display: inline-block;
+  width: 100%;
+
+}
+
+
+@media screen and (min-width: 60em){
+
+  main,
+  .content-waterfall{
+    margin: 0 20% 1% 5%;
+  }
+}
+
+@media screen and (max-width: 60em){
+  main{
+    grid-template-columns: 1fr;
+  }
+  .post-block-preview,
+  nav {
+    display: none;
+  }
+}
+
+
+

@@ -1,0 +1,43 @@
+/*** Clearfix ***/
+
+* {box-sizing: border-box;}
+
+.group:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*** Basic styles ***/
+
+header,
+section,
+footer {
+	border: 1px solid black;
+}
+
+header,
+footer{
+	height: 100px;
+	width: 100%;
+}
+
+/* Making the three boxes */
+
+section{
+	Height: 200px;
+	width: 33.3333%;
+	float: left;
+}
+
+footer {
+	clear: both;
+}
+
+/* making it responsive */
+
+@media screen and (max-width: 768px) {
+	section{
+		width: 100%;
+	}
+}

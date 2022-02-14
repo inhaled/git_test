@@ -1,0 +1,139 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-family: 'Saira Extra Condensed','Barlow Condensed','Open Sans Condensed',sans-serif;
+}
+
+header{
+  height: 100px;
+  background-color: #66768a;
+}
+h1{
+  font-weight: 500;
+  font-size: 5rem;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+nav{
+  float: left;
+  width: 100%;
+  color: white;
+  display: block;
+
+}
+footer{
+  display: block;
+  clear: both;
+  background-color: #66768a;
+  color: whitesmoke;
+  width: 100%;
+}
+section{
+  text-align: center;
+  padding: 30px 0px;
+}
+h2{
+  font-size: ;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.nav li {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.nav li:last-child{
+  margin-right: none;
+}
+
+.logo {
+ margin-left:  40%;
+}
+
+button{
+  float: right;
+  margin-right: 2%;
+}
+main{
+  display: block;
+  float: left;
+  background-color: #66768a;
+  padding: 30px 5% 60px 5%;
+  color: whitesmoke;
+  text-align: center;
+  width: 100%;
+}
+main a {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.logo{
+  height: 30px;
+  width: auto;
+}
+.show{
+  background-color: #dce1e6;
+}
+section.show div{
+  float: left;
+}
+
+main p{
+  font-size: 1.5rem;
+}
+
+section p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+div {width: 50%;
+padding: 120px 0;}
+
+div p {
+  width: 100%;
+
+}
+
+section img{
+  height: 200px;
+  width:  auto;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/******************************************
+
+Font awesome is the icon font
+set width 100% and media query, layout should stack by default
+hide menu and use media query to show the hamburger menu
+use placekitten for fast placeholder images
+dig deep, fight the suck, carry the fucking logs
+
+
+
