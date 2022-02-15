@@ -40,3 +40,20 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+/*input[type="search"]::-webkit-input-placeholder: {
+  background:  red;}*/
+
+input[type=search] {
+    background: #F0F1F2 url("../assets/images/magnifying-glass-solid.svg") no-repeat 100% 50%;
+  -webkit-filter: opacity(50%);
+  -moz-filter: opacity(50%);
+  -o-filter: opacity(50%);
+  -ms-filter: opacity(50%);
+  filter: opacity(50%);
+}
+
+.demo-wrap ::placeholder {
+  color: #000000;
+}
+
+

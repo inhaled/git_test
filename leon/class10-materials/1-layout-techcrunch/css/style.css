@@ -130,6 +130,12 @@ article{
   border-top: 2px solid whitesmoke;
 }
 
+article:hover,
+aside li:hover,
+main section:hover {
+  filter: opacity(60%);
+}
+
 article:last-child{
   border-bottom: 2px solid whitesmoke;
 }
