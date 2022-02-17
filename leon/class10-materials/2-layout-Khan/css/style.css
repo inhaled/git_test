@@ -20,16 +20,56 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+html{font: 300 1em/2em "Noto Sans",sans-serif;}
 
-body {
-
+header {
+border-bottom: 2px solid lightgray;
+font-weight: 700;
+color: #006aec;
+background-color: ffffff;
 }
 
+header a {
+  text-decoration: none;
+  color: #006aec;
+}
+
+ul{list-style: none;}
+a {text-decoration: none;}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
+ 
+}
+body {background-color: ffffff;}
+
+#frontpage-grid {position: relative;display: block; margin-left: auto;margin-right: 15%;transform: translate(10%,10%)} /*why does this work?*/
+.frontpage-image, .frontpage-header {
+  width: 40%;
+  float: left;
+}
+
+.frontpage-image img {
+  max-width: 100%;
+  float: right;
+}
+
+#why-khan-works {
+  background-color:#f7f5f4 ;
+  clear: both;
+  margin-top: 20%;
+  width: 100%;
+}
+
+.icon-grid{
+  padding: 10% 5%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5%;
+}
 
 }
 
@@ -43,8 +83,14 @@ footer {
 /*input[type="search"]::-webkit-input-placeholder: {
   background:  red;}*/
 
+input[type=search],
+header select {
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;}
+
 input[type=search] {
-    background: #F0F1F2 url("../assets/images/magnifying-glass-solid.svg") no-repeat 100% 50%;
+  background: #F0F1F2 url("../assets/images/magnifying-glass-solid.svg") no-repeat 100% 50%;
   -webkit-filter: opacity(50%);
   -moz-filter: opacity(50%);
   -o-filter: opacity(50%);
@@ -52,8 +98,113 @@ input[type=search] {
   filter: opacity(50%);
 }
 
+
+
 .demo-wrap ::placeholder {
-  color: #000000;
+  font-weight: 700;
+  color: #0060d6;
 }
 
 
+nav{height: 60px;width: 100%; text-align: center}
+
+#courses-dropdown {
+  background-color: #ffffff;
+  width: 50%;
+  text-align: right;
+  color: #006aec ;
+  font-weight: 700;
+}
+
+.drop-down, .search-form, .site-logo, .navbar-links {display: inline-block; vertical-align: middle; text-align: center;}
+.search-form {width: 15%;}
+.drop-down {text-align: right;}
+.search-form {text-align: left;}
+.search-form input{min-width: 120px; width: calc(120px + 4vw); max-width: 100%;}
+.site-logo span {font-size: 2rem; vertical-align: 15%; font-weight: 700; color: #0f2a66}
+.site-logo {width: 30%}
+.site-logo img{ height:2em; margin-top: 3%; }
+.navbar-links {width: 30%;list-style: none;}
+.navbar-links li {display: inline; margin-left: 15px;}
+.navbar-links a, .site-logo a {text-decoration: none;}
+
+main div{
+  display: block;
+}
+
+main div li,
+section div li {
+  display: inline-block;
+  background: #006aec;
+  padding: calc(0.2rem + 0.5vh) calc(0.6rem + 0.5vw);
+  border-radius: 5px;
+  font-size: calc(0.4rem + 1vh);
+  margin: 30px calc(0.05rem + 0.1vh);
+  cursor: pointer;
+  text-align: center;
+}
+
+#frontpage-header {width: 95%; }
+#differentiate {display: block; align-content: center; width: 95%; margin: 0 5%}
+
+h1, h2 {padding-top: 9%;}
+
+.cliente-buttons li {display: inline;}
+main div a, section div a {color: white}
+
+main div li:hover{filter: grayscale(50%);}s
+
+.mobile-menu-container {display: none}
+.search-mobile {display: none;}
+.menu-mobile {display: none;}
+
+@media screen and (max-width: 955px){
+  .search-form, .drop-down, .navbar-links {display: none;}
+  .mobile-menu-container {display: inline-block; width:15% ;}
+  .search-mobile {display: inline-block; font-size: 40px;margin-top: 1.5%;}
+  .menu-mobile {display: inline-block; font-size: 42px;margin-top: 1.5%; margin-left: 10px; margin-right: 1%;}
+  .site-logo {float: left ;margin-left: 1%;text-align: left;width: 70%;}
+  .frontpage-image {width: 100%; }
+  .frontpage-header {clear: both;} 
+
+  .icon-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+}
+
+/*
+#navbar {
+  display: inline-block;
+}
+.main-menu {
+  text-align: left;
+  display: inline-block;
+}
+.logo-container{
+  text-align: center;
+}
+.logo-container img{
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+ div.menu-links li {
+  text-align: right;
+  list-style: none;
+  vertical-align:middle;
+ }
+.inner-main-menu {margin: 0 auto; width: 60%;}
+.inner-main-menu ul {margin: 0; padding: 0; list-style: none; text-align: right;}
+.inner-main-menu ul li {float: none; display: inline-block;}
+.inner-main-menu ul li:nth-child(1){float: left}
+.inner-main-menu ul li:nth-child(2){float: left}
+.inner-main-menu ul li {text-decoration: none; display: inline-block; padding: 10px 20px;}
+.inner-main-menu ul li a {text-decoration: inherit;}
+.inner-main-menu ul li a:hover {color: white}
+
+.logo-main img {
+  height: 30px;
+  width: auto;
+}
