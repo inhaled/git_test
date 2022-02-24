@@ -1,0 +1,100 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header{display: block; height: auto;width: 100%; background: grey;}
+
+nav * {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+nav ul {
+  display: block;
+  }
+
+nav img {height: 30px}
+
+nav li{
+  border-left: 1px solid white;
+  margin-left: 1px;
+  padding-right: 5px;
+}
+nav a {
+  margin-left: 5px;
+}
+
+.signin-wrap{
+  margin-left: 3px;
+  }
+.more-wrap select{ width: 100%}
+
+
+#date-time{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 3em;
+}
+
+#date-time span{
+  margin-top: 1.5em;
+  text-align: right;
+  vertical-align: bottom;
+
+}
+
+#headline {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+}
+
+#headline > article {width: 1000px}
+
+
+#headline img {
+  max-width: 100%;
+}
+
+#headline span,
+#News span {
+  border-left: 3px solid gold;
+  padding-left: .75ch;
+}
+
+#headline {margin-bottom: 10em;}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.fa-circle-user {color: white}
